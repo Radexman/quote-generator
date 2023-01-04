@@ -29,16 +29,15 @@ const quotes = [
      person: 'Abraham Lincoln'}
 ]
 
-// Event that changes quotes on button click
-button.addEventListener('click', () => {
+// Generating quotes randomly
+const randomQuote = () => {
     let random = Math.floor(Math.random() * quotes.length);
     quote.textContent = quotes[random].quote;
     person.textContent = quotes[random].person;
-})
+}
 
-// Event that changes quotes on page load
-document.addEventListener('DOMContentLoaded', () => {
-    let random = Math.floor(Math.random() * quotes.length);
-    quote.textContent = quotes[random].quote;
-    person.textContent = quotes[random].person;
-})
+// Event that changes quotes on button click
+button.addEventListener('click', randomQuote);
+
+// Event that shows random quotes on page load
+document.addEventListener('DOMContentLoaded', randomQuote);
