@@ -3,6 +3,7 @@ const button = document.querySelector('#new-quote');
 let quote = document.querySelector('.textarea__blockquote');
 let person = document.querySelector('.main__person');
 
+// Array with quotes and persons
 const quotes = [
     {quote: `"True terror is to wake up one morning and discover that your high school class is running the country"`,
      person: 'Kurt Vonnegut'},
@@ -23,10 +24,20 @@ const quotes = [
     {quote: `"Behind every great man is a woman rolling her eyes."`,
      person: 'Jim Carrey'},
     {quote: `"The simplest toy, one which even the youngest child can operate, is called a grandparent."`,
-     person: 'Sam Levenson'}
+     person: 'Sam Levenson'},
+    {quote: `"I do the very best I know how - the very best I can; and I mean to keep on doing so until the end."`,
+     person: 'Abraham Lincoln'}
 ]
 
+// Event that changes quotes on button click
 button.addEventListener('click', () => {
+    let random = Math.floor(Math.random() * quotes.length);
+    quote.textContent = quotes[random].quote;
+    person.textContent = quotes[random].person;
+})
+
+// Event that changes quotes on page load
+document.addEventListener('DOMContentLoaded', () => {
     let random = Math.floor(Math.random() * quotes.length);
     quote.textContent = quotes[random].quote;
     person.textContent = quotes[random].person;
