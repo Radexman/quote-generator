@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(77, 75, 76, 0.73)),
+     url(./books.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.header {
+    font-size: 1.2rem;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: #262626;
+    width: 60%;
+    padding: .4em;
+    margin: 1.2em;
+    border-radius: .4em;
+}
+
+.main {
+    width: 70%;
+    min-height: 300px;
+    background-color: #ffffff98;
+    border-radius: 1em;
+    padding: 3.5em 2.5em;
+    box-shadow: 0 0 10px;
+}
+
+.textarea__blockquote {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.main__person {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-block: 1.4em;
+}
+
+#new-quote {
+    background-color: #262626;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: .4rem;
+    transition: .1s ease-in-out;
+}
+
+#new-quote:hover {
+    letter-spacing: 1px;
+}
+
+#new-quote:active {
+    background-color: #fff;
+    color: #262626;
+}
+
+@media screen and (max-width: 456px){
+    .main,
+    .header {
+        width: 90%;
+    }
+}
